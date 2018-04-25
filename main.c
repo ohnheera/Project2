@@ -3,3 +3,5 @@
 /*2014722001 YangHyoryeong*/
 /*2014722030 ParkHyuna*/
 #include <stdio.h>
+#include <sys/types.h>
+
