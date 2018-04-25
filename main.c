@@ -45,17 +45,21 @@ void filestat2(void)
 }
 void filetime1(void)
 {
-
+	//2014722001 hyoryeongYang
+	//get time info of file 1
 
 }
 void filetime2(void)
 {
-
+	//2014722001 hyoryeongYang
+	//get time info of file 2
 
 }
 void sizecmp(void)
 {
-	//hyoryeongYang
+	//2014722001 hyoryeongYang
+	//compare size of two files
+
 }
 void blockcmp(void)
 {
