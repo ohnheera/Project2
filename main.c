@@ -10,7 +10,7 @@
 #include <time.h>
 
 struct stat stat1, stat2;
-struct tm * time1, * time2;
+struct tm *time1, *time2;
 
 void filestat1(void);
 void filestat2(void);
@@ -57,7 +57,6 @@ void filetime1(void)
 	printf("date: %d\n", time1->tm_mday);
 	printf("hour: %d\n", time1->tm_hour);
 	printf("min: %d\n", time1->tm_min);
-
 }
 void filetime2(void)
 {
@@ -71,8 +70,6 @@ void filetime2(void)
         printf("date: %d\n", time2->tm_mday);
 	printf("hour: %d\n", time2->tm_hour);
         printf("min: %d\n", time2->tm_min);
-
-
 }
 void sizecmp(void)
 {
@@ -87,13 +84,12 @@ void sizecmp(void)
 		printf("text2 is bigger\n");
 	else
 		printf("sizes are equeal\n");
-
-
 }
 void blockcmp(void)
 {
   //heeraohn
-  //compare block count of two file
+  //compare block count of two file 
+  
   int block1 = (int)stat1.st_blocks;
   int block2 = (int)stat2.st_blocks;
   printf("block compare\n");
@@ -103,23 +99,26 @@ void blockcmp(void)
 }
 void datecmp(void)
 {
- 	//compare date
-		
+ 	//compare date		
 //hyunah
+	int t1_mon, t1_day, t2_mon, t2_day;
 	time1 = localtime(&stat1.st_mtime);
+	t1_mon = time1->tm_mon;
+	t1_day = time1->tm_mday;
 	time2 = localtime(&stat2.st_mtime);
-
-	if(time1->tm_mon < time2->tm_mon) {
+	t2_mon = time2->tm_mon;
+	t2_day = time2->tm_mday;
+	if(t1_mon < t2_mon) {
 		printf("datecmp : text1 is early\n");
 	}
-	else if(time1->tm_mon > time2->tm_mon) {
+	else if(t1_mon > t2_mon) {
 		printf("datecmp : text2 is early\n");
 	}
 	else {
-		if(time1->tm_mday < time2->tm_mday) {
+		if(t1_day < t2_day) {
 			printf("datecmp : text1 is early\n");
 		}
-		else if(time1->tm_mday > time2->tm_mday) {
+		else if(t1_day > t2_day) {
 			printf("datecmp : text2 is early\n");
 		}
 		else printf("datecmp : same date\n");
@@ -129,19 +128,25 @@ void timecmp(void)
 {
 	//compare time
 //hyunah
-	printf("text1 : %d %d\n", time1->tm_hour, time1->tm_min);
-	printf("text2 : %d %d\n", time2->tm_hour, time2->tm_min);
-	if(time1->tm_hour < time2->tm_hour) {
+	int t1_hour, t1_min, t2_hour, t2_min;
+	time1 = localtime(&stat1.st_mtime);
+	t1_hour = time1->tm_hour;
+	t1_min = time1->tm_min;
+	time2 = localtime(&stat2.st_mtime);
+	t2_hour = time2->tm_hour;
+	t2_min = time2->tm_min;
+
+	if(t1_hour < t2_hour) {
 		printf("timecmp : text1 is early\n");
 	}
-	else if(time1->tm_hour > time2->tm_hour) {
+	else if(t1_hour > t2_hour) {
 		printf("timecmp : text2 is early\n");
 	}
 	else {
-		if(time1->tm_min < time2->tm_min) {
+		if(t1_min < t2_min) {
 			printf("timecmp : text1 is early\n");
 		}
-		else if(time1->tm_min > time2->tm_min) {
+		else if(t1_min > t2_min) {
 			printf("timecmp : text2 is early\n");
 		}
 		else {
@@ -149,5 +154,4 @@ void timecmp(void)
 		}
 	}
 }
-
 
