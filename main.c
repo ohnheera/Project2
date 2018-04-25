@@ -37,11 +37,13 @@ void filestat1(void)
 {
   //heeraohn
   //get file stat to stat2
+  stat("/text1",&stat1); 
 }
 void filestat2(void)
 {
   //heeraohn
   //get file stat to stat2
+  stat("/text2",&stat2);
 }
 void filetime1(void)
 {
