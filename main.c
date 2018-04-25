@@ -84,12 +84,12 @@ void sizecmp(void)
 		printf("text2 is bigger\n");
 	else
 		printf("sizes are equeal\n");
-
 }
 void blockcmp(void)
 {
   //heeraohn
   //compare block count of two file 
+  
   int block1 = (int)stat1.st_blocks;
   int block2 = (int)stat2.st_blocks;
   printf("block compare\n");
