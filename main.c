@@ -104,11 +104,48 @@ void datecmp(void)
  	//compare date
 		
 //hyunah
+	time1 = localtime(&stat1.st_mtime);
+	time2 = localtime(&stat2.st_mtime);
+
+	if(time1->tm_mon < time2->tm_mon) {
+		printf("datecmp : text1 is early\n");
+	}
+	else if(time1->tm_mon > time2->tm_mon) {
+		printf("datecmp : text2 is early\n");
+	}
+	else {
+		if(time1->tm_mday < time2->tm_mday) {
+			printf("datecmp : text1 is early\n");
+		}
+		else if(time1->tm_mday > time2->tm_mday) {
+			printf("datecmp : text2 is early\n");
+		}
+		else printf("datecmp : same date\n");
+	}
 }
 void timecmp(void)
 {
 	//compare time
 //hyunah
+	printf("text1 : %d %d\n", time1->tm_hour, time1->tm_min);
+	printf("text2 : %d %d\n", time2->tm_hour, time2->tm_min);
+	if(time1->tm_hour < time2->tm_hour) {
+		printf("timecmp : text1 is early\n");
+	}
+	else if(time1->tm_hour > time2->tm_hour) {
+		printf("timecmp : text2 is early\n");
+	}
+	else {
+		if(time1->tm_min < time2->tm_min) {
+			printf("timecmp : text1 is early\n");
+		}
+		else if(time1->tm_min > time2->tm_min) {
+			printf("timecmp : text2 is early\n");
+		}
+		else {
+			printf("timecmp : same time\n");
+		}
+	}
 }
 
 
