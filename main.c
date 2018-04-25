@@ -34,18 +34,24 @@ int main(void)
 }
 
 void filestat1(void)
-{}
-void filestat2(void)
-{}
-void filetime1(void)
 {
   //heeraohn
-  //time1 has information of file1
+  //get file stat to stat2
+}
+void filestat2(void)
+{
+  //heeraohn
+  //get file stat to stat2
+}
+void filetime1(void)
+{
+
+
 }
 void filetime2(void)
 {
-  //heeraohn
-  //time2 has information of file2
+
+
 }
 void sizecmp(void)
 {}
