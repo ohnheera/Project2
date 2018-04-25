@@ -71,8 +71,6 @@ void filetime2(void)
         printf("date: %d\n", time2->tm_mday);
 	printf("hour: %d\n", time2->tm_hour);
         printf("min: %d\n", time2->tm_min);
-
-
 }
 void sizecmp(void)
 {
