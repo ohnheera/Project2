@@ -61,10 +61,12 @@ void blockcmp(void)
   //compare block count of two file
 }
 void datecmp(void)
-{}
-void datecmp(void)
-{}
+{
+//hyunah
+}
 void timecmp(void)
-{}
+{
+//hyunah
+}
 
 
