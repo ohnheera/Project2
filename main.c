@@ -2,7 +2,7 @@
 /*2014722069 OhnHeera*/
 /*2014722001 YangHyoryeong*/
 /*2014722030 ParkHyunah*/
-/*this is hyoryeong's branch*/
+
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -54,7 +54,9 @@ void filetime2(void)
 
 }
 void sizecmp(void)
-{}
+{
+	//hyoryeongYang
+}
 void blockcmp(void)
 {
   //heeraohn
