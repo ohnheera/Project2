@@ -40,16 +40,19 @@ void filestat2(void)
 void filetime1(void)
 {
   //heeraohn
+  //time1 has information of file1
 }
 void filetime2(void)
 {
   //heeraohn
+  //time2 has information of file2
 }
 void sizecmp(void)
 {}
 void blockcmp(void)
 {
   //heeraohn
+  //compare block count of two file
 }
 void datecmp(void)
 {}
