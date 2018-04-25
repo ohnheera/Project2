@@ -38,13 +38,19 @@ void filestat1(void)
 void filestat2(void)
 {}
 void filetime1(void)
-{}
+{
+  //heeraohn
+}
 void filetime2(void)
-{}
+{
+  //heeraohn
+}
 void sizecmp(void)
 {}
 void blockcmp(void)
-{}
+{
+  //heeraohn
+}
 void datecmp(void)
 {}
 void datecmp(void)
