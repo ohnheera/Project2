@@ -88,6 +88,7 @@ void sizecmp(void)
 	else
 		printf("sizes are equeal\n");
 
+
 }
 void blockcmp(void)
 {
