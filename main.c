@@ -2,7 +2,7 @@
 /*2014722069 OhnHeera*/
 /*2014722001 YangHyoryeong*/
 /*2014722030 ParkHyunah*/
-/*this is hyoryeong's branch*/
+
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -37,11 +37,13 @@ void filestat1(void)
 {
   //heeraohn
   //get file stat to stat2
+  stat("/text1",&stat1); 
 }
 void filestat2(void)
 {
   //heeraohn
   //get file stat to stat2
+  stat("/text2",&stat2);
 }
 void filetime1(void)
 {
