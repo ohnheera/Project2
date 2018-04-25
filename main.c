@@ -64,10 +64,13 @@ void blockcmp(void)
 }
 void datecmp(void)
 {
+ 	//compare date
+		
 //hyunah
 }
 void timecmp(void)
 {
+	//compare time
 //hyunah
 }
 
