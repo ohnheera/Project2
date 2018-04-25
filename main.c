@@ -52,10 +52,12 @@ void blockcmp(void)
   //heeraohn
 }
 void datecmp(void)
-{}
-void datecmp(void)
-{}
+{
+//hyunah
+}
 void timecmp(void)
-{}
+{
+//hyunah
+}
 
 
