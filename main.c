@@ -61,6 +61,12 @@ void blockcmp(void)
 {
   //heeraohn
   //compare block count of two file
+  int block1 = (int)stat1.st_blocks;
+  int block2 = (int)stat2.st_blocks;
+  printf("block compare\n");
+  if(block1>block2) printf("text1 is bigger\n");
+  else if(block2>block1) printf("text2 is bigger\n");
+  else printf("text1 and text2 has same block size\n");
 }
 void datecmp(void)
 {
