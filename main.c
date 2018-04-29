@@ -100,21 +100,26 @@ void blockcmp(void)
 void datecmp(void)
 {
  	//compare date		
-//hyunah
+	//2014722030 hyunah park
 	int t1_mon, t1_day, t2_mon, t2_day;
+	
+	//'localtime()'function has problem to return memory
 	time1 = localtime(&stat1.st_mtime);
 	t1_mon = time1->tm_mon;
 	t1_day = time1->tm_mday;
+
 	time2 = localtime(&stat2.st_mtime);
 	t2_mon = time2->tm_mon;
 	t2_day = time2->tm_mday;
+	////////////////////////////////////////////////////
+
 	if(t1_mon < t2_mon) {
 		printf("datecmp : text1 is early\n");
 	}
 	else if(t1_mon > t2_mon) {
 		printf("datecmp : text2 is early\n");
 	}
-	else {
+	else {//if t1_mon == t2_mon, compare day
 		if(t1_day < t2_day) {
 			printf("datecmp : text1 is early\n");
 		}
@@ -127,14 +132,18 @@ void datecmp(void)
 void timecmp(void)
 {
 	//compare time
-//hyunah
+	//2014722030 hyunah park
 	int t1_hour, t1_min, t2_hour, t2_min;
+	
+	//**************************************//
 	time1 = localtime(&stat1.st_mtime);
 	t1_hour = time1->tm_hour;
 	t1_min = time1->tm_min;
+
 	time2 = localtime(&stat2.st_mtime);
 	t2_hour = time2->tm_hour;
 	t2_min = time2->tm_min;
+	/////////////////////////////////////////
 
 	if(t1_hour < t2_hour) {
 		printf("timecmp : text1 is early\n");
@@ -142,7 +151,7 @@ void timecmp(void)
 	else if(t1_hour > t2_hour) {
 		printf("timecmp : text2 is early\n");
 	}
-	else {
+	else {//if t1_hour == t2_hour, compare minute
 		if(t1_min < t2_min) {
 			printf("timecmp : text1 is early\n");
 		}
