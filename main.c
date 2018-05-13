@@ -145,15 +145,18 @@ void timecmp(void)
 	//compare time
 	//2014722030 hyunah park
 	int t1_hour, t1_min, t2_hour, t2_min;
+	int t1_sec, t2_sec;
 
 	//**************************************//
 	time1 = localtime(&stat1.st_mtime);
 	t1_hour = time1->tm_hour;
 	t1_min = time1->tm_min;
+	t1_sec = time1->tm_sec;
 
 	time2 = localtime(&stat2.st_mtime);
 	t2_hour = time2->tm_hour;
 	t2_min = time2->tm_min;
+	t2_sec = time2->tm_sec;
 	/////////////////////////////////////////
 
 	if(t1_hour < t2_hour) {
@@ -170,7 +173,15 @@ void timecmp(void)
 			printf("timecmp : text2 is early\n");
 		}
 		else {
-			printf("timecmp : same time\n");
+			if(t1_sec < t2_sec) {
+				printf("timecmp : text1 is early\n");
+			}
+			else if(t1_sec > t2_sec) {
+				printf("timecmp : text2 is early\n");
+			}
+			else {
+				printf("timecmp : same time\n");
+			}
 		}
 	}
 }
