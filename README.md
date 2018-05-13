@@ -2,6 +2,9 @@
 
 Assignment2<br>
 
-팀장 2014722069 온희라(ohnheera) <br>
-팀원 2014722001 양효령(HyoryeongYang) 박현아(RosieInthepark)
+팀장 <br>
+2014722069 온희라(ohnheera) <br>
+팀원 <br>
+2014722001 양효령(HyoryeongYang) <br>
+2014722030 박현아(RosieInthepark)
 
