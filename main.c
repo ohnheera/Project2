@@ -37,7 +37,7 @@ void filestat1(void)
 {
   //heeraohn
   //get file stat to stat2
-  stat("text1",&stat1); 
+  stat("text1",&stat1);
 }
 void filestat2(void)
 {
@@ -88,8 +88,8 @@ void sizecmp(void)
 void blockcmp(void)
 {
   //heeraohn
-  //compare block count of two file 
-  
+  //compare block count of two file
+
   int block1 = (int)stat1.st_blocks;
   int block2 = (int)stat2.st_blocks;
   printf("block compare\n");
@@ -99,29 +99,43 @@ void blockcmp(void)
 }
 void datecmp(void)
 {
- 	//compare date		
+ 	//compare date
 //hyunah
 	int t1_mon, t1_day, t2_mon, t2_day;
+	int t1_year, t2_year;
+
 	time1 = localtime(&stat1.st_mtime);
 	t1_mon = time1->tm_mon;
 	t1_day = time1->tm_mday;
+	t1_year = time1->tm_year;
+
 	time2 = localtime(&stat2.st_mtime);
 	t2_mon = time2->tm_mon;
 	t2_day = time2->tm_mday;
-	if(t1_mon < t2_mon) {
+	t2_year = time2->tm_year;
+
+	if(t1_year < t2_year) {
 		printf("datecmp : text1 is early\n");
 	}
-	else if(t1_mon > t2_mon) {
+	else if(t1_year > t2_year) {
 		printf("datecmp : text2 is early\n");
 	}
 	else {
-		if(t1_day < t2_day) {
+		if(t1_mon < t2_mon) {
 			printf("datecmp : text1 is early\n");
 		}
-		else if(t1_day > t2_day) {
+		else if(t1_mon > t2_mon) {
 			printf("datecmp : text2 is early\n");
 		}
-		else printf("datecmp : same date\n");
+		else {
+			if(t1_day < t2_day) {
+				printf("datecmp : text1 is early\n");
+			}
+			else if(t1_day > t2_day) {
+				printf("datecmp : text2 is early\n");
+			}
+			else printf("datecmp : same date\n");
+		}
 	}
 }
 void timecmp(void)
@@ -154,4 +168,3 @@ void timecmp(void)
 		}
 	}
 }
-
